@@ -5,28 +5,46 @@
     <title>HTML</title>
     <style>
 
+        body {
+            font-size: 16px;
+            font-family: 'Courier New'
+        }
+
         h1 {
             font-size: 65px;
             color: orange;
+            font-family: sans-serif;
+            text-align: center;
+            text-decoration: underline;
         }
 
-        #corFundo {
+        p {
+            font-weight: 600;
+            font-size: 48px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        
+        .corFundo {
             background-color: rgb(255, 204, 64);
         }
 
         li {
             background-color: rgb(255, 228, 140);
+            line-height: 30px;
         }
 
     </style>
 </head>
 <body>
     <h1>Exercícios 3.2</h1>
-    <p id="corFundo">Qual é a sua cor favorita?</p>
-    <ul id="corFundo">
-        <li>Amarelo</li>
-        <li>Vermelho</li>
-        <li>Marrom</li>
+    <p class="corFundo">Qual é a sua cor favorita?</p>
+    <ul class="corFundo">
+        <li style="background-color: yellow;">Amarelo</li>
+        <li style="background-color: red;">Vermelho</li>
+        <li style="background-color: rgb(124, 17, 17);">Marrom</li>
     </ul>
 </body>
 </html>
