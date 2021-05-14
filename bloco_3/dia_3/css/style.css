@@ -11,14 +11,30 @@
     width: 50px;
   }
 
-  .padding {
-   padding: 20px;
-  }
+.padding {
+	padding: 20px;
+}
 
-  .margin {
-    margin: 30px;
-  }
+.margin {
+  margin: 30px;
+}
 
-  .border {
-    border: 5px solid black;
-  }
+.border {
+  border: 5px solid black;
+}
+  
+.a {
+  background-color: #036b52
+}
+
+.b {
+  background-color: #41197f;
+}
+
+.c {
+  background-color: #444955;
+}
+
+.d {
+  background-color: #3898EC;
+}
