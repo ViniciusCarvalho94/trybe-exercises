@@ -6,7 +6,7 @@
 body {
     background-color: #edf2f4;
     color: #293241;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -18,9 +18,9 @@ header{
 
 h1 {
     color: #edf2f4;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 800;
-    padding: 15px; 
+    padding: 10px; 
 }
 
 #minhaFoto {
@@ -30,7 +30,7 @@ h1 {
 
 h2 {
      color: #2b2d42;
-     font-size: 30px;
+     font-size: 20px;
      font-weight: 600;
 }
 
