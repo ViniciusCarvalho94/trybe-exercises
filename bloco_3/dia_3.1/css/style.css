@@ -1,0 +1,39 @@
+* {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.super-mario {
+  width: 300px;
+  display: block;
+}
+
+.goomba {
+  width: 300px;
+  margin-top: -20px;
+}
+
+.fala-bowser {
+  position: absolute;
+  font-size: 20px;
+  top: 1020px;
+  left: 20px;
+  z-index: 2;
+}
+
+.baloon {
+  top: 965px;
+  position: absolute;
+  z-index: 1;
+  width: 250px;
+}
+
+.bowser {
+  width: 300px;
+  position: absolute;
+  left: 250px;
+}
