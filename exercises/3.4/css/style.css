@@ -1,0 +1,16 @@
+* {
+  font-family: sans-serif;
+}
+
+#aside {
+  margin-top: 35px;
+  float: right;
+}
+aside img {
+  width: 250px;
+}
+
+aside table {
+  text-align: left;
+  width: 250px;
+}
