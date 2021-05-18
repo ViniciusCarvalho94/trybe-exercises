@@ -1,16 +1,129 @@
 * {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 800px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+#header-nav {
+  background: linear-gradient(360deg, rgb(160, 220, 255), rgb(255, 255, 255));
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+header {
+  padding: 3px;
+  border: transparent;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+nav a{
+  padding: 5px;
+  display: inline-block;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 10px 5px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(101, 198, 255);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #aside {
   margin-top: 35px;
   float: right;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 2px;
 }
 aside img {
   width: 250px;
 }
 
-aside table {
+table {
+  color: rgb(0, 0, 0);
   text-align: left;
   width: 250px;
+}
+
+caption {
+  background-color: rgb(163, 221, 255);
+  padding: 2px;
+  margin: 2px;
+}
+
+th, td {
+  padding: 2px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+main {
+  margin-top: 50px;
+  width: 500px;
+}
+
+main article {
+  margin-top: 15px;
+
+}
+
+p {
+  margin-left: 35px;
+  text-align: justify;
+  width: 480px;
+  line-height: 1.3em;
+}
+
+.img-conteudo {
+  width: 480px;
+  margin-top: 15px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+ul {
+  margin-left: 52px;
+  text-align: justify;
+  width: 460px;
+  line-height: 1.3em;
+}
+
+li{
+  margin-bottom: 10px;
+}
+
+iframe {
+  width: 480px;
+  height: 270px;
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: rgb(160, 220, 255);
+  border-top: 1px solid black;
+  padding: 45px 10px 15px 280px;
+  font-size: 16px;
+
 }
