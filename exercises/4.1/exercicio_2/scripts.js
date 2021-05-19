@@ -1,10 +1,10 @@
-let a = 5;
-let b = 5;
+let A = 5;
+let B = 5;
 
-if (a > b) {
-  console.log("o maior é o valor de a que é " + a)
-} else if (b > a) {
-  console.log("o maior é o valor de b que é " + b)
+if (A > B) {
+  console.log("o maior é o valor de a que é " + A)
+} else if (B > A) {
+  console.log("o maior é o valor de b que é " + B)
 } else {
   console.log("o valor de a e b são iguais")
 }
