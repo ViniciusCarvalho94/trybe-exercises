@@ -28,10 +28,10 @@ if (salarioInss >= 1903.99 && salarioInss <= 2826.65) {
   ir = 0.0;
 }
 
-if (salarioBruto < 0) {
-  console.log("O salário não pode ser um valor negativo");
-}
-
 salarioFinal = salarioInss - ir;
 
-console.log(salarioFinal.toFixed(2));
+if (salarioBruto < 0) {
+  console.log("O salário não pode ser um valor negativo");
+} else {
+  console.log(salarioFinal.toFixed(2));
+}
