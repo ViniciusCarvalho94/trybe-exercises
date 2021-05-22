@@ -1,7 +1,11 @@
-let numero = 5;
+let numero = 3;
 let caractere = '*'
+let linha = ''
 
 
 for (let i = 0; i < numero; i += 1) {
-  console.log(caractere)
+  linha = linha + caractere;
+};
+for (let i = 0; i < numero; i += 1) {
+  console.log(linha)
 }
