@@ -1,6 +1,8 @@
-let n = 5;
-let a = ['*', '**', '***', '****', '*****'];
+let numero = 3;
+let caractere = '*';
+let linha = ''
 
-for (let i = 0; i < n; i += 1) {
-  console.log(a[i])
+for (let i = 0; i < numero; i += 1) {
+  linha = linha + caractere
+  console.log(linha)
 }
