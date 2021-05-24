@@ -3,8 +3,8 @@ let player = {
   lastName: 'Silva',
   age: 34,
   medals: {
-    golde: 2,
+    golden: 2,
     silver: 3
   },
-  bestInTheWorld = [2006, 2007, 2008, 2009, 2010, 2018]
+  bestInTheWorld: [2006, 2007, 2008, 2009, 2010, 2018]
 }
