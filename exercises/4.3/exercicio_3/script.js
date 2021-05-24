@@ -1,6 +1,17 @@
-let n = 5;
-let a = ['    *', '   **', '  ***', ' ****', '*****'];
+let numero = 100;
+let caractere = '*';
+let impresso = '';
+let localImpresso = numero;
 
-for (let i = 0; i < n; i += 1) {
-  console.log(a[i])
+for (let linha = 0; linha <= numero; linha += 1) {
+  for (let coluna = 0; coluna  <= numero; coluna  += 1) {
+    if (coluna  < localImpresso) {
+      impresso = impresso + ' '
+    } else {
+      impresso = impresso + caractere;
+    }
+  }
+  console.log(impresso);
+  impresso = '';
+  localImpresso -= 1;
 }
