@@ -1,4 +1,4 @@
-let numero = 100;
+let numero = 10;
 let caractere = '*';
 let impresso = '';
 let localImpresso = numero;
