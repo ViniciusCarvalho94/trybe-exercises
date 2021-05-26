@@ -1,5 +1,5 @@
 let divisor = 1;
-let primo = 17;
+let primo = 31;
 
 for (let i = 2; i <= primo; i += 1) {
   if (primo % i === 0) { 
