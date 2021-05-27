@@ -57,16 +57,20 @@
   </head>
   <body>
     <script>
+      function createDiv(){
+        let div = document.createElement('div')
+        return div
+      }
       //exercicio 1
       let h1 = document.createElement('h1');
       h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
       document.body.appendChild(h1);
       //exercicio 2
-      let divMain = document.createElement('div');
+      let divMain = createDiv()
       divMain.className = 'main-content';
       document.body.appendChild(divMain);
       //exercicio 3
-      let divCenter = document.createElement('div');
+      let divCenter = createDiv()
       divCenter.className = 'center-content';
       divMain.appendChild(divCenter);
       //exercicio 4
@@ -74,9 +78,13 @@
       p.innerHTML = 'Texto Paragrafo'
       divCenter.appendChild(p)
       //exercicio 5
-      let divLeft = document.createElement('div')
+      let divLeft = createDiv();
       divLeft.className = 'left-content'
       divMain.appendChild(divLeft)
+      //exercicio 6
+      let divRight = createDiv()
+      divRight.className = 'right-content'
+      divMain.appendChild(divRight)
     </script>
   </body>
 </html>
