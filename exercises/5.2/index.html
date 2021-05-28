@@ -102,15 +102,21 @@
         ul.appendChild(li)
       }
       //exercicio 9
+      let h3;
       for (let i = 0; i < 3; i += 1){
-        let h3 = document.createElement('h3')
+        h3 = document.createElement('h3')
         divMain.appendChild(h3)
       }
 
       //PARTE 2
 
       //exercicio 1
-      h1.className = 'title'
+      h1.className = 'title';
+      //exercicio 2
+       let h3Name = document.getElementsByTagName('h3')
+       for (let i = 0; i < h3Name.length; i += 1) {
+         h3Name[i].className = 'description'
+       }
     </script>
   </body>
 </html>
