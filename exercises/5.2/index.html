@@ -90,6 +90,16 @@
       img.src = 'https://picsum.photos/200'
       img.className = 'small-image'
       divLeft.appendChild(img)
+      //exercicio 8
+      let ul = document.createElement('ul')
+      divRight.appendChild(ul)
+      let numerosExtenso = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+      for (let i in numerosExtenso) {
+        let li = document.createElement('li')
+        li.innerText = numerosExtenso[i]
+        ul.appendChild(li)
+      }
+      
     </script>
   </body>
 </html>
