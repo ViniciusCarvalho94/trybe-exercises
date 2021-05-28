@@ -1,124 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Exercício 5.2</title>
-    <style>
-      div {
-        border-color: black;
-        border-style: solid;
-      }
 
-      .title {
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    div {
+      border-color: black;
+      border-style: solid;
+    }
 
-      .main-content {
-        background-color: yellow;
-      }
+    .title {
+      text-align: center;
+    }
 
-      .main-content .center-content {
-        background-color: red;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    .main-content {
+      background-color: yellow;
+    }
 
-      .main-content .center-content p {
-        font-style: italic;
-      }
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      .main-content .left-content {
-        background-color: green;
-        width: 60%;
-        margin-left: 0;
-        margin-right: auto;
-      }
+    .main-content .center-content p {
+      font-style: italic;
+    }
 
-      .main-content .left-content .small-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 100%;
-      }
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
 
-      .main-content .right-content {
-        background-color: blue;
-        width: 60%;
-        margin-left: auto;
-        margin-right: 0;
-      }
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
 
-      .main-content .description {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      function createDiv(){
-        let div = document.createElement('div')
-        return div
-      }
-      //PARTE 1
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
 
-      //exercicio 1
-      let h1 = document.createElement('h1');
-      h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-      document.body.appendChild(h1);
-      //exercicio 2
-      let divMain = createDiv()
-      divMain.className = 'main-content';
-      document.body.appendChild(divMain);
-      //exercicio 3
-      let divCenter = createDiv()
-      divCenter.className = 'center-content';
-      divMain.appendChild(divCenter);
-      //exercicio 4
-      let p = document.createElement('p')
-      p.innerHTML = 'Texto Paragrafo'
-      divCenter.appendChild(p)
-      //exercicio 5
-      let divLeft = createDiv();
-      divLeft.className = 'left-content'
-      divMain.appendChild(divLeft)
-      //exercicio 6
-      let divRight = createDiv()
-      divRight.className = 'right-content'
-      divMain.appendChild(divRight)
-      //exercicio 7
-      let img = document.createElement('img')
-      img.src = 'https://picsum.photos/200'
-      img.className = 'small-image'
-      divLeft.appendChild(img)
-      //exercicio 8
-      let ul = document.createElement('ul')
-      divRight.appendChild(ul)
-      let numerosExtenso = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
-      for (let i in numerosExtenso) {
-        let li = document.createElement('li')
-        li.innerText = numerosExtenso[i]
-        ul.appendChild(li)
-      }
-      //exercicio 9
-      let h3;
-      for (let i = 0; i < 3; i += 1){
-        h3 = document.createElement('h3')
-        divMain.appendChild(h3)
-      }
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
 
-      //PARTE 2
+<body>
+  <script>
+    function createDiv() {
+      let div = document.createElement('div')
+      return div
+    }
+    //PARTE 1
 
-      //exercicio 1
-      h1.className = 'title';
-      //exercicio 2
-       let h3Name = document.getElementsByTagName('h3')
-       for (let i = 0; i < h3Name.length; i += 1) {
-         h3Name[i].className = 'description'
-       }
-       //exercicio 3
-       divMain.removeChild(divLeft)
-    </script>
-  </body>
+    //exercicio 1
+    let h1 = document.createElement('h1');
+    h1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+    document.body.appendChild(h1);
+    //exercicio 2
+    let divMain = createDiv()
+    divMain.className = 'main-content';
+    document.body.appendChild(divMain);
+    //exercicio 3
+    let divCenter = createDiv()
+    divCenter.className = 'center-content';
+    divMain.appendChild(divCenter);
+    //exercicio 4
+    let p = document.createElement('p')
+    p.innerHTML = 'Texto Paragrafo'
+    divCenter.appendChild(p)
+    //exercicio 5
+    let divLeft = createDiv();
+    divLeft.className = 'left-content'
+    divMain.appendChild(divLeft)
+    //exercicio 6
+    let divRight = createDiv()
+    divRight.className = 'right-content'
+    divMain.appendChild(divRight)
+    //exercicio 7
+    let img = document.createElement('img')
+    img.src = 'https://picsum.photos/200'
+    img.className = 'small-image'
+    divLeft.appendChild(img)
+    //exercicio 8
+    let ul = document.createElement('ul')
+    divRight.appendChild(ul)
+    let numerosExtenso = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+    for (let i in numerosExtenso) {
+      let li = document.createElement('li')
+      li.innerText = numerosExtenso[i]
+      ul.appendChild(li)
+    }
+    //exercicio 9
+    let h3;
+    for (let i = 0; i < 3; i += 1) {
+      h3 = document.createElement('h3')
+      divMain.appendChild(h3)
+    }
+
+    //PARTE 2
+
+    //exercicio 1
+    h1.className = 'title';
+    //exercicio 2
+    let h3Name = document.getElementsByTagName('h3')
+    for (let i = 0; i < h3Name.length; i += 1) {
+      h3Name[i].className = 'description'
+    }
+    //exercicio 3
+    divMain.removeChild(divLeft);
+    //exercicio 4
+    divRight.style.margin = 'auto';
+  </script>
+</body>
+
 </html>
