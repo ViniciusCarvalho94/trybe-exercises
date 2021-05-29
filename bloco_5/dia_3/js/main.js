@@ -8,7 +8,7 @@ const myWebpage = document.getElementById('mySpotrybefy');
 //  Copie esse arquivo e edite apenas ele;
 //  Crie uma função que adicione a classe 'tech' ao elemento selecionado;
 // 1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function classeChange(click) {  
+function classeChange(click) {
   let tech = document.querySelector('.tech')
   tech.classList.remove('tech')
   click.target.classList.add('tech')
@@ -27,7 +27,7 @@ function inputText(text){
   textElement.innerText = text.target.value;
 };
 
-input.addEventListener('input', inputText)  
+input.addEventListener('input', inputText)
 
 //  Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;

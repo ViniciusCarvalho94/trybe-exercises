@@ -102,3 +102,14 @@ fridayButtonClick.addEventListener('click', function() {
     clickFriday = false
   }
 })
+
+//exercicio 6
+let days = document.querySelector('#days');
+
+days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '32px';
+})
+
+days.addEventListener('mouseout', function(event) {
+    event.target.style.fontSize = '20px';
+})
