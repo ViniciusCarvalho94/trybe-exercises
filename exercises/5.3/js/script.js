@@ -36,11 +36,31 @@ createDaysOfTheMonth();
 
 function holidayButton() {
   const buttons = document.querySelector('.buttons-container');
-  const holidayBtn = document.createElement('button') 
+  const holidayBtn = document.createElement('button');
   holidayBtn.innerHTML = 'Feriados';
   holidayBtn.id = 'btn-holiday';
 
-  buttons.appendChild(holidayBtn)
+  buttons.appendChild(holidayBtn);
 }
 
-holidayButton()
+holidayButton();
+
+const clickHoliday = document.querySelector('#btn-holiday');
+let click = false
+
+clickHoliday.addEventListener('click', function(){
+  const li = document.getElementsByClassName('holiday')
+  if (click == false){
+    for (let i = 0; i < li.length; i += 1){
+      li[i].style.backgroundColor = 'rgb(135, 181, 132)'
+    }
+    click = true
+    return;
+  } 
+  if (click == true){
+    for (let i = 0; i < li.length; i += 1){
+      li[i].style.backgroundColor = 'rgb(238,238,238)'
+    }
+    click = false
+  }
+})
