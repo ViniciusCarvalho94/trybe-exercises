@@ -48,23 +48,23 @@ function holidayButton() {
 holidayButton();
 
 //exercicio 3
-const clickHoliday = document.querySelector('#btn-holiday');
-let click = false
+const holidayButtonClick = document.querySelector('#btn-holiday');
+let clickHoliday = false
 
-clickHoliday.addEventListener('click', function(){
+holidayButtonClick.addEventListener('click', function(){
   const li = document.getElementsByClassName('holiday')
-  if (click == false){
+  if (clickHoliday == false){
     for (let i = 0; i < li.length; i += 1){
       li[i].style.backgroundColor = 'rgb(135, 181, 132)'
     }
-    click = true
+    clickHoliday = true
     return void(0);
   }
-  if (click == true){
+  if (clickHoliday == true){
     for (let i = 0; i < li.length; i += 1){
       li[i].style.backgroundColor = 'rgb(238,238,238)'
     }
-    click = false
+    clickHoliday = false
   }
 })
 
@@ -79,3 +79,26 @@ function fridayButton() {
 }
 
 fridayButton();
+
+//exercicio 5
+let fridayButtonClick = document.querySelector('#btn-friday')
+let clickFriday = false
+
+fridayButtonClick.addEventListener('click', function() {
+  const sextou = document.getElementsByClassName('friday')
+  if (clickFriday == false) {
+    for (let i = 0; i < sextou.length; i += 1) {
+      sextou[i].innerText = 'SextouO/'
+
+    }
+    clickFriday = true
+    return void(0)
+  }
+  if (clickFriday == true) {
+    sextou[0].innerText = '4'
+    sextou[1].innerText = '11'
+    sextou[2].innerText = '18'
+    sextou[3].innerText = '25'
+    clickFriday = false
+  }
+})
