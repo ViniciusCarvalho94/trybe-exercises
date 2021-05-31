@@ -135,3 +135,19 @@ function createTaskLegend () {
 }
 
 createTaskLegend()
+
+//exercicio 9
+let div=document.querySelector('.task');
+let selected=false;
+
+function classSelected(event) {
+  if(selected === false){
+  event.target.classList.add( 'selected' );
+  selected = true
+  } else {
+    event.target.classList.remove( 'selected' );
+    selected = false
+    }
+}
+
+div.addEventListener("click",classSelected)
