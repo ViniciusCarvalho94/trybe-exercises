@@ -108,21 +108,30 @@ const days = document.querySelector('#days');
 
 days.addEventListener('mouseover', function(event) {
   event.target.style.fontSize = '32px';
-  event.target.style.color = '#3e9e35'
 })
 
 days.addEventListener('mouseout', function(event) {
   event.target.style.fontSize = '20px';
-  event.target.style.color = '#777777'
 })
 
 //exercicio 7
-
 function createTask(text) {
   const tasks = document.querySelector('.my-tasks')
   const newTask = document.createElement('span')
+  newTask.className = 'tasks'
   newTask.innerHTML = text
   tasks.appendChild(newTask)
 }
 
-createTask('1 - Estudar Functions')
+createTask('Projeto:')
+
+//exercicio 8
+function createTaskLegend () {
+  const task = document.querySelector('.tasks')
+  const legend = document.createElement('div')
+  legend.className = 'task'
+  legend.style.backgroundColor = '#328000'
+  task.appendChild(legend)
+}
+
+createTaskLegend()
