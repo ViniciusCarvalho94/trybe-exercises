@@ -25,9 +25,9 @@ function createDaysOfTheMonth() {
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
     dayListItem.className = 'day';
-    if (days == 24 || days == 31) {dayListItem.className = 'day holiday'}
-    if (days == 4 || days == 11 || days == 18) {dayListItem.className = 'day friday'}
-    if (days == 25) {dayListItem.className = 'day holiday friday'}
+    if (days == 24 || days == 31) {dayListItem.className = 'holiday'}
+    if (days == 4 || days == 11 || days == 18) {dayListItem.className = 'friday'}
+    if (days == 25) {dayListItem.className = 'holiday friday'}
 
     dezDays.appendChild(dayListItem)
   }
@@ -55,7 +55,7 @@ holidayButtonClick.addEventListener('click', function(){
   const li = document.getElementsByClassName('holiday')
   if (clickHoliday == false){
     for (let i = 0; i < li.length; i += 1){
-      li[i].style.backgroundColor = 'rgb(135, 181, 132)'
+      li[i].style.backgroundColor = '#47ff72'
     }
     clickHoliday = true
     return void(0);
@@ -104,12 +104,25 @@ fridayButtonClick.addEventListener('click', function() {
 })
 
 //exercicio 6
-let days = document.querySelector('#days');
+const days = document.querySelector('#days');
 
 days.addEventListener('mouseover', function(event) {
-    event.target.style.fontSize = '32px';
+  event.target.style.fontSize = '32px';
+  event.target.style.color = '#3e9e35'
 })
 
 days.addEventListener('mouseout', function(event) {
-    event.target.style.fontSize = '20px';
+  event.target.style.fontSize = '20px';
+  event.target.style.color = '#777777'
 })
+
+//exercicio 7
+
+function createTask(text) {
+  const tasks = document.querySelector('.my-tasks')
+  const newTask = document.createElement('span')
+  newTask.innerHTML = text
+  tasks.appendChild(newTask)
+}
+
+createTask('1 - Estudar Functions')
