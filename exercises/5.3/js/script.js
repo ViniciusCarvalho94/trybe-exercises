@@ -25,9 +25,9 @@ function createDaysOfTheMonth() {
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
     dayListItem.className = 'day';
-    if (days == 24 || days == 31) {dayListItem.className = 'holiday'}
-    if (days == 4 || days == 11 || days == 18) {dayListItem.className = 'friday'}
-    if (days == 25) {dayListItem.className = 'holiday friday'}
+    if (days == 24 || days == 31) { dayListItem.className = 'holiday' }
+    if (days == 4 || days == 11 || days == 18) { dayListItem.className = 'friday' }
+    if (days == 25) { dayListItem.className = 'holiday friday' }
 
     dezDays.appendChild(dayListItem)
   }
@@ -51,17 +51,17 @@ holidayButton();
 const holidayButtonClick = document.querySelector('#btn-holiday');
 let clickHoliday = false
 
-holidayButtonClick.addEventListener('click', function(){
+holidayButtonClick.addEventListener('click', function () {
   const li = document.getElementsByClassName('holiday')
-  if (clickHoliday == false){
-    for (let i = 0; i < li.length; i += 1){
+  if (clickHoliday == false) {
+    for (let i = 0; i < li.length; i += 1) {
       li[i].style.backgroundColor = '#47ff72'
     }
     clickHoliday = true
-    return void(0);
+    return void (0);
   }
-  if (clickHoliday == true){
-    for (let i = 0; i < li.length; i += 1){
+  if (clickHoliday == true) {
+    for (let i = 0; i < li.length; i += 1) {
       li[i].style.backgroundColor = 'rgb(238,238,238)'
     }
     clickHoliday = false
@@ -84,7 +84,7 @@ fridayButton();
 let fridayButtonClick = document.querySelector('#btn-friday')
 let clickFriday = false
 
-fridayButtonClick.addEventListener('click', function() {
+fridayButtonClick.addEventListener('click', function () {
   const sextou = document.getElementsByClassName('friday')
   if (clickFriday == false) {
     for (let i = 0; i < sextou.length; i += 1) {
@@ -92,7 +92,7 @@ fridayButtonClick.addEventListener('click', function() {
 
     }
     clickFriday = true
-    return void(0)
+    return void (0)
   }
   if (clickFriday == true) {
     sextou[0].innerText = '4'
@@ -106,11 +106,11 @@ fridayButtonClick.addEventListener('click', function() {
 //exercicio 6
 const days = document.querySelector('#days');
 
-days.addEventListener('mouseover', function(event) {
+days.addEventListener('mouseover', function (event) {
   event.target.style.fontSize = '32px';
 })
 
-days.addEventListener('mouseout', function(event) {
+days.addEventListener('mouseout', function (event) {
   event.target.style.fontSize = '20px';
 })
 
@@ -126,28 +126,50 @@ function createTask(text) {
 createTask('Projeto:')
 
 //exercicio 8
-function createTaskLegend () {
+function createTaskLegend(color) {
   const task = document.querySelector('.tasks')
   const legend = document.createElement('div')
   legend.className = 'task'
-  legend.style.backgroundColor = '#328000'
+  legend.style.backgroundColor = color
   task.appendChild(legend)
 }
 
-createTaskLegend()
+createTaskLegend('#328000')
 
 //exercicio 9
-let div=document.querySelector('.task');
-let selected=false;
+function setTaskClass() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
 
-function classSelected(event) {
-  if(selected === false){
-  event.target.classList.add( 'selected' );
-  selected = true
-  } else {
-    event.target.classList.remove( 'selected' );
-    selected = false
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
     }
-}
+  });
+};
 
-div.addEventListener("click",classSelected)
+setTaskClass();
+
+div.addEventListener("click", classSelected)
+
+//exercicio 10
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();
