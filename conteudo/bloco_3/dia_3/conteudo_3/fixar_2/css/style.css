@@ -1,0 +1,95 @@
+* {
+  font-family: sans-serif;
+  background-color: rgb(221, 221, 221);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  margin: 10px;
+  font-size: 40px;
+  padding: 10px;
+}
+
+p {
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+div {
+  margin-left: 10px;
+  border: 2px transparent;
+  padding: 10px;
+  line-height: 20px;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+div:hover {
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 200px;
+  display: inline-block;
+  padding: 7px;
+}
+
+h3 {
+  width: 200px;
+}
+
+#primaria {
+  color: blue;
+  background-color: gray;
+}
+
+#azul {
+  font-style: italic;
+  background-color: gray;
+}
+
+#secundaria {
+  color: purple;
+  background-color: gray;
+}
+
+#roxo {
+  background-color: gray;
+}
+
+#complementar {
+  font-style: italic;
+  color: rgb(65, 122, 0);
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  font-size: 20px;
+}
+
+#verdeOliva {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 25px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#escura {
+  color: black;
+  background-color: gray;
+}
+
+#preto {
+  background-color: gray;
+}
+
+#clara {
+  color: white;
+  background-color: gray;
+}
+
+#branco {
+  font-style: italic;
+  background-color: gray;
+}

@@ -1,0 +1,44 @@
+        body {
+            font-size: 16px;
+            font-family: 'Courier New'
+        }
+
+        h1 {
+            font-size: 65px;
+            color: orange;
+            font-family: sans-serif;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 48px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        
+        li {
+            background-color: rgb(255, 228, 140);
+            line-height: 30px;
+        }
+
+        .corFundo {
+            background-color: rgb(255, 204, 64);
+        }
+
+        #amarelo {
+          background-color: yellow;
+        }
+
+        #vermelho {
+          background-color: red;
+          color: white;
+        }
+
+        #marrom {
+          background-color: rgb(124, 17, 17);
+          color: white;
+        }
