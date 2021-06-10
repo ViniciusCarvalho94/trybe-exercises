@@ -1,97 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="node_modules/pikaday/css/pikaday.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Formulário de currículo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="node_modules/pikaday/css/pikaday.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Formulário de currículo</title>
-</head>
-
-<body class="bg-light bg-gradient">
-
-  <h1 class="display-5 text-center">Formulário</h1>
-  <form action="" method="GET">
-
-    <div class="container-sm">
-      <label for="input-name">Nome:</label>
-      <input class="form-control" type="text" name="nome" id="input-name" maxlength="40"
-        placeholder="Digite seu nome completo" required>
-    </div>
-
-    <div class="container-sm">
-      <label for="input-email">E-mail</label>
-      <input class="form-control" type="email" name="email" id="input-email" maxlength="50"
-        placeholder="Digite seu e-mail" required>
-    </div>
-
-    <div class="container-sm">
-      <label for="input-cpf">CPF:</label>
-      <input class="form-control" type="text" name="cpf" id="input-cpf" maxlength="11"
-        placeholder="Digite apenas numeros" onblur="formatCPF(this)" required>
-    </div>
-
-    <div class="container-sm">
-      <label for="input-adress">Endereço:</label>
-      <input class="form-control" type="text" name="adress" id="input-adress" maxlength="200"
-        placeholder="Digite seu endereço" required>
-    </div>
-
-    <div class="container-sm">
-      <label for="input-city">Cidade:</label>
-      <input class="form-control" type="text" name="city" id="input-city" maxlength="28" placeholder="Digite sua cidade"
-        required>
-    </div>
-
-    <div class="container-sm">
-      <label for="dropdown-state">Estado:
-        <select class="form-control" name="state" id="dropdown-state" required></select>
-      </label>
-    </div>
-    <div class="container-sm">
-      <p>Tipo de casa:</p>
-      <div class="form-check form-check-inline">
-        <label class="form-check-label" for="radio-home">
-          <input class="form-check-input" type="radio" name="home-local" id="radio-home">Casa
-        </label>
+  <body class="bg-light bg-gradient">
+    <h1 class="display-5 text-center">Formulário</h1>
+    <form class="forms" action="" method="GET">
+      <div class="container-sm">
+        <label for="input-name">Nome:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          id="input-name"
+          placeholder="Digite seu nome completo"
+          data-validate-field="name"
+        />
       </div>
 
-      <div class="form-check form-check-inline">
-        <label class="form-check-label" for="radio-apartment">
-          <input class="form-check-input" type="radio" name="home-local" id="radio-apartment">Apartamento
+      <div class="container-sm">
+        <label for="input-email">E-mail</label>
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="input-email"
+          placeholder="Digite seu e-mail"
+          data-validate-field="email"
+        />
+      </div>
+
+      <div class="container-sm">
+        <label for="input-cpf">CPF:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="cpf"
+          id="input-cpf"
+          placeholder="Digite apenas numeros"
+          onblur="formatCPF(this)"
+          data-validate-field="cpf"
+        />
+      </div>
+
+      <div class="container-sm">
+        <label for="input-adress">Endereço:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="adress"
+          id="input-adress"
+          placeholder="Digite seu endereço"
+          data-validate-field="adress"
+        />
+      </div>
+
+      <div class="container-sm">
+        <label for="input-city">Cidade:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="city"
+          id="input-city"
+          placeholder="Digite sua cidade"
+          data-validate-field="city"
+        />
+      </div>
+
+      <div class="container-sm">
+        <label for="dropdown-state"
+          >Estado:
+          <select
+            class="form-control"
+            name="state"
+            id="dropdown-state"
+            data-validate-field="state"
+          ></select>
         </label>
       </div>
-    </div>
+      <div class="container-sm">
+        <p>Tipo de casa:</p>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label" for="radio-home">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="home-local"
+              id="radio-home"
+              data-validate-field="home-local"
+            />Casa
+          </label>
+        </div>
 
-    <div class="container-sm">
-      <label for="input-resume">Resumo do currículo:</label>
-      <textarea class="form-control form-control-sm" name="description" id="input-resume" cols="30" rows="5"
-        maxlength="1000" required></textarea>
-    </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label" for="radio-apartment">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="home-local"
+              id="radio-apartment"
+              data-validate-field="home-local"
+            />Apartamento
+          </label>
+        </div>
+      </div>
 
-    <div class="container-sm">
-      <label for="input-carrerPosition">Cargo:</label>
-      <input class="form-control form-control-sm" type="text" maxlength="40" required>
-    </div>
+      <div class="container-sm">
+        <label for="input-resume">Resumo do currículo:</label>
+        <textarea
+          class="form-control form-control-sm"
+          name="description"
+          id="input-resume"
+          data-validate-field="description"
+        ></textarea>
+      </div>
 
-    <div class="container-sm">
-      <label for="input-carrerPositionDescription">Descrição do cargo:</label>
-      <textarea class="form-control form-control-sm" name="carrerPositionDescription"
-        id="input-carrerPositionDescription" cols="30" rows="5" maxlength="500" required></textarea>
-    </div>
+      <div class="container-sm">
+        <label for="input-carrerPosition">Cargo:</label>
+        <input
+          class="form-control form-control-sm"
+          type="text"
+          name="carrerPosition"
+          data-validate-field="carrerPosition"
+        />
+      </div>
 
-    <div class="container-sm">
-      <label for="datepicker">Data de início:</label>
-      <input class="form-control form-control-sm" type="text" id="datepicker" required>
-    </div>
-    <div class="container-sm">
-      <input type="submit" class="btn btn-primary mb-3" id="submit">
-      <input type="reset" class="btn btn-primary mb-3" name="erase" id="erase">
-    </div>
-  </form>
-  <script src="node_modules/pikaday/pikaday.js"></script>
-  <script src="js/script.js"></script>
-</body>
+      <div class="container-sm">
+        <label for="input-carrerPositionDescription">Descrição do cargo:</label>
+        <textarea
+          class="form-control form-control-sm"
+          name="carrerPositionDescription"
+          id="input-carrerPositionDescription"
+          data-validate-field="carrerPositionDescription"
+        ></textarea>
+      </div>
 
+      <div class="container-sm">
+        <label for="datepicker">Data de início:</label>
+        <input
+          class="form-control form-control-sm"
+          type="text"
+          id="datepicker"
+        />
+      </div>
+      <div class="container-sm">
+        <input type="submit" class="btn btn-primary mb-3" id="submit" />
+        <input
+          type="reset"
+          class="btn btn-primary mb-3"
+          name="erase"
+          id="erase"
+        />
+      </div>
+    </form>
+    <script src="node_modules/pikaday/pikaday.js"></script>
+    <script src="node_modules/just-validate/dist/js/just-validate.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
