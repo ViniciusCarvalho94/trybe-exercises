@@ -32,3 +32,21 @@ newState('sc', 'Santa Catarina')
 newState('sp', 'São Paulo')
 newState('se', 'Sergipe')
 newState('to', 'Tocantins')
+
+function formatCPF(cpf) {
+  const elementoAlvo = cpf
+  const cpfAtual = cpf.value   
+  let cpfAtualizado;
+  cpfAtualizado = cpfAtual.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, 
+    function( regex, argumento1, argumento2, argumento3, argumento4 ) {
+      return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
+  })  
+  elementoAlvo.value = cpfAtualizado; 
+}
+
+const form = document.querySelector('form');
+const sumit = document.getElementById('submit');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+})
