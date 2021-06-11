@@ -12,6 +12,10 @@ header {
   align-items: center;
 }
 
+.header-img {
+  width: 70px;
+}
+
 h1 {
   color: white;
 }
@@ -21,14 +25,37 @@ h3 {
   text-decoration: underline;
 }
 
-section p {
-  margin-top: 10px;
+.subTitle {
+  margin-top: 15px;
   text-align: center;
   font-size: 18px;
 }
 
-.header-img {
-  width: 70px;
+.content {
+  margin: 15px;
+  text-align: center;
+  line-height: 2rem;
+  color: #7a7a7a;
+}
+
+.borderBox {
+  margin: 10px;
+  border-radius: 7%;
+  box-shadow: 1px 1px 1px 1px #bdbdbd;
+  padding: 10px;
+  background-color: #F1F1F1;
+}
+
+#upperContent {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+#underContent {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 
 .gallery-img {
