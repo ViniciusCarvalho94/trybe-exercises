@@ -100,13 +100,11 @@ new window.JustValidate('.forms', {
     state: {
       required: true,
     },
-    home: {
+    homeLocal: {
       required: true,
     },
     description: {
       required: true,
-      cols: 30,
-      rows: 5,
       maxLength: 1000,
     },
     carrerPosition: {
@@ -115,9 +113,10 @@ new window.JustValidate('.forms', {
     },
     carrerPositionDescription: {
       required: true,
-      cols: 30,
-      rows: 5,
       maxLength: 500,
     },
+    date: {
+      required: true
+    }
   },
 });
