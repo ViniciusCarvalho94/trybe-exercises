@@ -62,6 +62,16 @@ h3 {
   width: 150px;
 }
 
+hr {
+  width: 250px;
+  margin: 10px auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
 .social-img {
   width: 25px;
   margin-left: 10px;
