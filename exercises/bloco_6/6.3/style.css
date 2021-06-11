@@ -5,6 +5,14 @@
   font-family: 'Ubuntu';
 }
 
+header {
+  background-color: #323433;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
 .header-img {
   width: 70px;
 }
