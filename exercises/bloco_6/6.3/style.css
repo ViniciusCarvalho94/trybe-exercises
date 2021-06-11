@@ -21,6 +21,12 @@ h3 {
   text-decoration: underline;
 }
 
+section p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
 .header-img {
   width: 70px;
 }
