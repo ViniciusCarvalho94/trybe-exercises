@@ -10,7 +10,15 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+h1 {
   color: white;
+}
+
+h3 {
+  color: #cecece;
+  text-decoration: underline;
 }
 
 .header-img {
