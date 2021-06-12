@@ -39,9 +39,9 @@ h3 {
 }
 
 .borderBox {
-  margin: 10px;
+  margin: 15px;
   border-radius: 9%;
-  box-shadow: 3px 3px 5px 1px #bdbdbd;
+  box-shadow: 2px 2px 2px 1px #bdbdbd;
   padding: 10px;
   background-color: #F1F1F1;
 }
