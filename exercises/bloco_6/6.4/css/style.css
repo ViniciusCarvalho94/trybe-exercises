@@ -49,7 +49,9 @@ body {
 
 .movie-container {
   display: flex;
+  flex-basis: 700px;
   flex-direction: column;
+  flex-grow: 10;
 }
 
 .movie-container h2 {
@@ -61,7 +63,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  flex-basis: 700px;
 }
 
 .card-container div {
@@ -69,18 +70,19 @@ body {
   background-color: #5C687C;
   border: black solid 1px;
   display: flex;
+  flex-basis: 16%;
   height: 150px;
   justify-content: center;
   margin: 10px;
-  flex-basis: 16%;
 }
 
 .aside-container {
+  align-self: center;
   display: flex;
-  flex-direction: column;
-  margin: 20px;
   flex-basis: 350px;
-  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 20px;
 }
 
 .aside-container h3, h4 {
