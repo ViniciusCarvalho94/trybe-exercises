@@ -9,6 +9,7 @@ html {
   margin: 0;
   padding: 0;
   line-height: 1.3rem;
+  list-style: none;
 }
 
 body {
@@ -35,7 +36,6 @@ header p {
 }
 
 header nav ul {
-  list-style: none;
   display: flex;
   padding: 5px;
   justify-content: space-around;
@@ -89,3 +89,9 @@ footer p {
   color: rgb(255, 255, 255);
 }
 
+@media screen and (min-width: 576px) {
+  body {
+    margin: 20px;
+    font-size: 16px;
+  }
+}
