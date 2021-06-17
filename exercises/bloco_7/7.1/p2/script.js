@@ -1,7 +1,6 @@
 //exercicio 1
 
-const factorial = (number) =>
-  number === 0 ? 1 : number * factorial(number - 1);
+const factorial = (number) => number === 0 ? 1 : number * factorial(number - 1);
 
 console.log(factorial(4));
 
@@ -14,6 +13,6 @@ console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"
 //exercicio 3
 
 let clickCount = 0
-let textToDisplay = document.getElementById("text")
+let textToDisplay = document.getElementById("count")
 
-document.getElementById("button_test").addEventListener("click", () => textToDisplay.innerHTML = clickCount += 1)
+document.getElementById("click-btn").addEventListener("click", () => textToDisplay.innerHTML = clickCount += 1)
