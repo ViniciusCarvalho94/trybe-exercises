@@ -34,12 +34,14 @@ const order = {
   },
 };
 
+//exercicio 1
 const customerInfo = (order) => {
-  console.log(`Olá ${order.order.delivery['deliveryPerson']}, entrega para: ${order['name']}, Telefone ${order['phonenumber']}, R. ${order.address['street']}, Nº: ${order.address['number']}, AP: ${order.address['apartment']}`)
+  console.log(`Olá ${order.order.delivery['deliveryPerson']}, entrega para: ${order['name']}, Telefone ${order['phoneNumber']}, R. ${order.address['street']}, Nº: ${order.address['number']}, AP: ${order.address['apartment']}`)
 }
 
 customerInfo(order);
 
+//exercicio 2
 const orderModifier = (order) => {
   const newPerson = Object.keys(order.order.delivery)[0] = 'Luiz Silva'
   const newTotal = Object.keys(order.payment)[0] = '50'
