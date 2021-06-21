@@ -1,12 +1,12 @@
 const assert = require('assert');
 
 const sumAllNumbers = (numbers) => {
-  let total = 0
+  let total = 0;
   for (i = 0; i < numbers.length; i += 1) {
-    total = total + numbers[i]
+    total = total + numbers[i];
   }
-  return total
-}
+  return total;
+};
 
 const numbers = [9, 23, 10, 3, 8];
 const expected = 53;

@@ -1,14 +1,14 @@
 const assert = require('assert');
 
 const findTheNeedle = (words, word) => {
-  let output = -1
+  let output = -1;
   for (i = 0; i <= words.length; i += 1) {
     if (words[i] === word) {
-      return i
-    } 
+      return i;
+    }
   }
-  return output
-}
+  return output;
+};
 
 let words = ['house', 'train', 'slide', 'needle', 'book'];
 let expected = 3;

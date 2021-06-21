@@ -8,19 +8,19 @@ function myFizzBuzz(num) {
   return num;
 }
 
-assert.strictEqual(typeof(myFizzBuzz), 'function')
+assert.strictEqual(typeof myFizzBuzz, 'function');
 
 // exercicio 1
-assert.strictEqual(myFizzBuzz(15), 'fizzbuzz')
+assert.strictEqual(myFizzBuzz(15), 'fizzbuzz');
 
 // exercicio 2
-assert.strictEqual(myFizzBuzz(6), 'fizz')
+assert.strictEqual(myFizzBuzz(6), 'fizz');
 
 // exercicio 3
-assert.strictEqual(myFizzBuzz(10), 'buzz')
+assert.strictEqual(myFizzBuzz(10), 'buzz');
 
 // exercicio 4
-assert.strictEqual(myFizzBuzz(2), 2)
+assert.strictEqual(myFizzBuzz(2), 2);
 
 // exercicio 5
-assert.strictEqual(myFizzBuzz('8'), false)
+assert.strictEqual(myFizzBuzz('8'), false);

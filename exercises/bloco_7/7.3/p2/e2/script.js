@@ -1,12 +1,12 @@
 const assert = require('assert');
 
 const wordLengths = (words) => {
-  let letters = []
+  let letters = [];
   for (i = 0; i < words.length; i += 1) {
-    letters.push(words[i].length)
+    letters.push(words[i].length);
   }
-  return letters
-}
+  return letters;
+};
 
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
 const expected = [3, 6, 10, 5];

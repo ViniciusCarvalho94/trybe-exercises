@@ -1,12 +1,12 @@
 const assert = require('assert');
 
 const addOne = (array) => {
-  let arr = []
-  for(i = 0; i < array.length; i += 1) {
-    arr.push(array[i] + 1)
+  let arr = [];
+  for (i = 0; i < array.length; i += 1) {
+    arr.push(array[i] + 1);
   }
-  return arr
-}
+  return arr;
+};
 
 const myArray = [31, 57, 12, 5];
 const unchanged = [31, 57, 12, 5];
