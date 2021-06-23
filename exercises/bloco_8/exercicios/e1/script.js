@@ -1,17 +1,17 @@
-const newEmployees = () => {
+const newEmployees = (callback) => {
   const employees = {
-    id1: name('Pedro Guerra'),
-    id2: name('Luiza Drumond'),
-    id3: name('Carla Paiva'),
+    id1: callback('Pedro Guerra'),
+    id2: callback('Luiza Drumond'),
+    id3: callback('Carla Paiva'),
   };
   return employees;
 };
 
-const name = (param) => {
+const employer = (param) => {
   const string = param.toLowerCase().replace(' ', '_');
   const email = `${string}@trybe.com`;
-  const employees = {nome: param, email: email};
-  return employees;
+  const allEmployees = {nome: param, email: email};
+  return allEmployees;
 };
 
-console.log(newEmployees())
+console.log(newEmployees(employer))
