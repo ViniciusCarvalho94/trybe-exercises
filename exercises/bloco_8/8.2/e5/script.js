@@ -66,7 +66,10 @@ const books = [
 const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
-  return books.every((element) => (element.author.birthYear >= 1901 && element.author.birthYear <= 2000))
+  return books.every(
+    (element) =>
+      element.author.birthYear >= 1901 && element.author.birthYear <= 2000
+  );
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);

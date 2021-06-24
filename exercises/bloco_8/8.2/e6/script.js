@@ -63,15 +63,12 @@ const books = [
   },
 ];
 
-function smallerName() {
-  let nameBook;
-  books.forEach((element) => {
-    if (!nameBook || element.name.length < nameBook.length) {
-      nameBook = element.name;
-    }
-  });
+const expectedResult = true;
 
-  return nameBook;
+function someBookWasReleaseOnThe80s() {
+  return books.some(
+    (element) => element.releaseYear >= 1980 && element.releaseYear <= 1989
+  );
 }
 
-assert.strictEqual(smallerName(), 'Duna');
+assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);

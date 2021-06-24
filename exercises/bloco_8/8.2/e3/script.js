@@ -75,7 +75,7 @@ const expectedResult = {
 };
 
 function getNamedBook() {
-  return books.find((element) => element.name.length === 26)
+  return books.find((element) => element.name.length === 26);
 }
 
 assert.deepStrictEqual(getNamedBook(), expectedResult);
