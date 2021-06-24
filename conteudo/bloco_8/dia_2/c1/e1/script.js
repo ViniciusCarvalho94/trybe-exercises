@@ -10,5 +10,5 @@ const showEmailList = (email) => {
 };
 
 emailListInData.forEach((element) => {
-  showEmailList(element)
-}) 
+  showEmailList(element);
+});
