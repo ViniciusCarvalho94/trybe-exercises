@@ -19,16 +19,4 @@ const right = (answers, student, callback) => {
   return callback(answers, student)
 }
 
-// console.log(right(rightAnswers, studentAnswers, correct))
-
-let bla = rightAnswers.forEach(element => {
-  if (answers[i] === student[i]) {
-    grades += 1
-  } else if (student[i] === 'N.A') {
-    grades = grades
-  } else {
-   grades -= 0.5
-  }
-});
-
-console.log(bla)
+console.log(right(rightAnswers, studentAnswers, correct))
