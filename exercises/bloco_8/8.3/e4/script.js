@@ -88,7 +88,8 @@ const expectedResult = [
 ];
 
 function oldBooksOrdered() {
-  return books.filter((element) => ((2021 - element.releaseYear) > 60)).sort((a, b) => a.releaseYear - b.releaseYear)
+  return books.filter((element) => ((2021 - element.releaseYear) > 60))
+  .sort((a, b) => a.releaseYear - b.releaseYear)
 }
 
 assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
