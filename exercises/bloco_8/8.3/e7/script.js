@@ -66,7 +66,7 @@ const books = [
 const expectedResult = 'O Senhor dos Anéis';
 
 function authorWith3DotsOnName() {
-  return books.filter((element) => element.author.name.match(/([A-Z][.]\s){3}/))
+  return books.filter((element) => element.author.name.match(/(\D[.]\s){3}/))
   .map((element) => element.name).toString()
 }
 
