@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3rem;
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: justify;
+  font-size: 14px;
+  margin: 10px;
+  background-color: rgb(214, 214, 214);
+}
+
+header {
+  background-color: rgb(85, 96, 255);
+  border-radius: 5px;
+  padding: 3px;
+}
+
+header p {
+  font-size: 17px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+header nav ul li {
+  color: rgb(62, 255, 255);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  color: rgb(0, 100, 167);
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+
+.aside-one, .aside-two, .main-content{
+  margin-bottom: 15px;
+}
+
+.aside-one ul li, .aside-two {
+  font-size: 13px;
+}
+
+h1 {
+  font-size: 15px;
+  text-align: center;
+  color: rgb(0, 100, 167);
+  margin: 15px 0 15px 0;
+}
+
+.main-content p {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgb(85, 96, 255);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+footer h3 {
+  font-size: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 15px 0 15px 0;
+}
+
+footer p {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    margin: 20px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header p {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .initial-content{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .aside-one, .aside-two, .main-content{
+    margin-bottom: 20px;
+  }
+}
