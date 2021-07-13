@@ -6,7 +6,7 @@ const {
   obj1,
   obj2,
   obj3,
-} = require('./exerciciosP1')
+} = require('./p1.js')
 
 
 //exercicio 1
