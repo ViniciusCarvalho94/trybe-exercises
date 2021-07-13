@@ -85,7 +85,7 @@ describe('Testes exercicio 4', () => {
   })
 
   it('Ao passar um parâmetro que não é um número, verifica se o retorno é o esperado', () => {
-    expect(false).toBe(myFizzBuzz('5'))
+    expect(myFizzBuzz('5')).toBeFalsy()
   })
 })
 
