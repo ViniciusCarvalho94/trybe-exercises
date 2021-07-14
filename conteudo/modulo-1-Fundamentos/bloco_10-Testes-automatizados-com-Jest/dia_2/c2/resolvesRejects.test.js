@@ -35,4 +35,4 @@ describe('Testando promise - findAnimalsByType', () => {
       return expect(getListAnimals('Lion')).rejects.toEqual({ error: 'Não possui esse tipo de animal.' })
     });
   });
-});
+})
