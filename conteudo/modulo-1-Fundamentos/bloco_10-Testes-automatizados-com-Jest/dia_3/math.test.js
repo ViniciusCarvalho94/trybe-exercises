@@ -13,7 +13,7 @@ describe('Exercicio 1', () => {
 //exercicio 2
 describe('Exercicio 2', () => {
   it('Testa o retorno da função multiplicar no padrão 10', () => {
-    math.multiplicar = jest.fn().mockReturnValue(10)
+    math.multiplicar = jest.fn().mockReturnValue(10);
   
     math.multiplicar();
     expect(math.multiplicar).toHaveBeenCalled();
@@ -63,7 +63,7 @@ describe('Exercicio 4', () => {
 describe('Exercicio 5', () => {
   test('Testa o retorno da funcão subtrair, altera ela, um valor padrão de 20 e restaura a implementação original dela', () => {
     const mockSub = jest.spyOn(math, 'subtrair');
-    mockSub.mockRestore()
+    mockSub.mockRestore();
     mockSub.mockImplementation((a, b) => a * b);
     mockSub.mockReturnValue(20);
   
@@ -78,6 +78,6 @@ describe('Exercicio 5', () => {
     expect(mockSub(10, 2)).toBe(8);
     expect(mockSub).toHaveBeenCalled();
     expect(mockSub).toHaveBeenCalledTimes(1);
-    expect(mockSub).toHaveBeenCalledWith(10, 2)
+    expect(mockSub).toHaveBeenCalledWith(10, 2);
   });
 })
