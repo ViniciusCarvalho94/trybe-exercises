@@ -1,6 +1,6 @@
 # Meu repositório de exercícios da Trybe
 
-#### Modulo 1: Fundamentos do Desenvolvimento Web ⌛
+#### Modulo 1: Fundamentos do Desenvolvimento Web ✅
 
 - ✅ **Bloco 01:** Unix & Bash
 - ✅ **Bloco 02:** Git, GitHub e Internet
@@ -11,11 +11,11 @@
 - ✅ **Bloco 07:** Introdução à JavaScript ES6 e Testes Unitários
 - ✅ **Bloco 08:** Higher Order Functions do JavaScript ES6
 - ✅ **Bloco 09:** JavaScript Assíncrono e Promises
-- ⌛ **Bloco 10:** Testes automatizados com Jest
+- ✅ **Bloco 10:** Testes automatizados com Jest
 
-#### Modulo 2: Desenvolvimento Front-end ❌
+#### Modulo 2: Desenvolvimento Front-end ⌛
 
-- ❌ **Bloco 11:** Introdução à React
+- ⌛ **Bloco 11:** Introdução à React
 - ❌ **Bloco 12:** Componentes com Estado, Eventos e Formulários com React
 - ❌ **Bloco 13:** Ciclo de Vida de Componentes e React Router
 - ❌ **Bloco 14:** Metodologias Ágeis
