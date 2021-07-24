@@ -15,8 +15,8 @@
 
 #### Modulo 2: Desenvolvimento Front-end ⌛
 
-- ⌛ **Bloco 11:** Introdução à React
-- ❌ **Bloco 12:** Componentes com Estado, Eventos e Formulários com React
+- ✅ **Bloco 11:** Introdução à React
+- ⌛ **Bloco 12:** Componentes com Estado, Eventos e Formulários com React
 - ❌ **Bloco 13:** Ciclo de Vida de Componentes e React Router
 - ❌ **Bloco 14:** Metodologias Ágeis
 - ❌ **Bloco 15:** Testes automatizados com React Testing Library
