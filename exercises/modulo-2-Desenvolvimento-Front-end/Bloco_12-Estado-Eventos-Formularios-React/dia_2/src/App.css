@@ -1,0 +1,13 @@
+label {
+  display: block;
+  margin: 5px;
+}
+
+input, select {
+  margin: 5px;
+}
+
+.radio {
+  display: inline-block;
+  margin: 5px;
+}
