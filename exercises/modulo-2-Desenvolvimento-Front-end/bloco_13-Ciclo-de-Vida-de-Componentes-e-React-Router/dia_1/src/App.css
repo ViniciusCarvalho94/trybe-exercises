@@ -1,0 +1,50 @@
+p {
+  position: fixed;
+  top: 200px;
+  left: 250px;
+  font-size: larger;
+}
+
+img {
+  width: 500px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 1px black;
+  animation: alpha2 2s;
+}
+
+button {
+  position: fixed;
+  top: 15px;
+  left: 540px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 0 black;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: beige;
+}
+
+@keyframes alpha {
+  0% {
+    opacity: 100%;
+  }
+  100% { 
+    opacity: 0%;
+  }
+}
+
+@keyframes alpha2 {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
