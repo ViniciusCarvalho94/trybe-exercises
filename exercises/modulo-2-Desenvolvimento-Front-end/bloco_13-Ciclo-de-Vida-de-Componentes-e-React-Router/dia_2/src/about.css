@@ -1,0 +1,14 @@
+h3, p {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+.imgPokedex {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 500px;
+}

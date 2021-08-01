@@ -1,0 +1,18 @@
+.moreDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pokemonCard {
+  margin: auto;
+}
+
+.maps {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.maps img {
+  width: 240px;
+}
