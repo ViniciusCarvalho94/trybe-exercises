@@ -20,9 +20,9 @@
 - ✅ **Bloco 13:** Ciclo de Vida de Componentes e React Router
 - ✅ **Bloco 14:** Metodologias Ágeis
 - ✅ **Bloco 15:** Testes automatizados com React Testing Library
-- ⌛ **Bloco 16:** Gerenciamento de estado com Redux
-- ❌ **Bloco 17:** Projeto Jogo de Trivia
-- ❌ **Bloco 18:** Context API e React Hooks
+- ✅ **Bloco 16:** Gerenciamento de estado com Redux
+- ✅ **Bloco 17:** Projeto Jogo de Trivia
+- ⌛ **Bloco 18:** Context API e React Hooks
 - ❌ **Bloco 19:** Projeto App de Receitas
 
 
