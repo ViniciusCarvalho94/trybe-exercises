@@ -1,6 +1,6 @@
 import React from 'react';
 import Provider from './context/provider';
-import './css/App.css';
+import './style/App.css';
 
 function App() {
   return (
