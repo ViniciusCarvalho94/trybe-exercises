@@ -13,7 +13,7 @@
 - ✅ **Bloco 09:** JavaScript Assíncrono e Promises
 - ✅ **Bloco 10:** Testes automatizados com Jest
 
-#### Modulo 2: Desenvolvimento Front-end ⌛
+#### Modulo 2: Desenvolvimento Front-end ✅
 
 - ✅ **Bloco 11:** Introdução à React
 - ✅ **Bloco 12:** Componentes com Estado, Eventos e Formulários com React
@@ -22,13 +22,13 @@
 - ✅ **Bloco 15:** Testes automatizados com React Testing Library
 - ✅ **Bloco 16:** Gerenciamento de estado com Redux
 - ✅ **Bloco 17:** Projeto Jogo de Trivia
-- ⌛ **Bloco 18:** Context API e React Hooks
-- ❌ **Bloco 19:** Projeto App de Receitas
+- ✅ **Bloco 18:** Context API e React Hooks
+- ✅ **Bloco 19:** Projeto App de Receitas
 
 
-#### Modulo 3: Desenvolvimento Back-end ❌
+#### Modulo 3: Desenvolvimento Back-end ⌛
 
-- ❌ **Bloco 20:** Introdução à SQL
+- ⌛ **Bloco 20:** Introdução à SQL
 - ❌ **Bloco 21:** Funções SQL, Joins e Subqueries
 - ❌ **Bloco 22:** Normalização e Modelagem de Banco de Dados
 - ❌ **Bloco 23:** Introdução ao MongoDB
