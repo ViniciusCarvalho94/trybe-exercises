@@ -1,0 +1,16 @@
+USE scientists;
+SELECT 'This is SQL Exercise, Practice and Solution';
+SELECT 1 AS numero_1, 2 AS numero_2, 3 AS numero_3;
+SELECT 10 + 15;
+SELECT (5 + 5) * 2;
+SELECT * FROM scientists;
+SELECT name AS projeto, hours AS tempo FROM projects;
+SELECT name FROM scientists ORDER BY name;
+SELECT name FROM projects ORDER BY name DESC;
+SELECT CONCAT('O Projeto ', name, ' precisou de ', hours, ' para ser concluído!') AS resultado FROM projects;
+SELECT name AS projeto, hours AS tempo FROM projects ORDER BY hours DESC LIMIT 3;
+SELECT DISTINCT project FROM assignedto;
+SELECT name FROM projects ORDER BY hours DESC LIMIT 1;
+SELECT name FROM projects ORDER BY hours LIMIT 1 OFFSET 1;
+SELECT * FROM projects ORDER BY hours LIMIT 5;
+SELECT CONCAT('Existem ', COUNT(SSN), ' cientistas na tabela Scientists.') AS resultado FROM scientists;
