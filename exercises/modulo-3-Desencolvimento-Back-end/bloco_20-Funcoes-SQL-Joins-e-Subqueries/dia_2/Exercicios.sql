@@ -1,0 +1,13 @@
+SELECT m.title, b.domestic_sales, b.international_sales FROM pixar.movies AS m INNER JOIN pixar.boxoffice AS b ON m.id = b.movie_id;
+SELECT m.title, b.international_sales FROM pixar.movies AS m INNER JOIN pixar.boxoffice AS b ON m.id = b.movie_id WHERE b.international_sales > b.domestic_sales;
+SELECT m.title, b.rating FROM pixar.movies as m INNER JOIN pixar.boxoffice AS b ON m.id = b.movie_id ORDER BY b.rating DESC;
+SELECT t.name, t.location, m.title, m.director, m.`year`, m.length_minutes FROM pixar.theater AS t LEFT JOIN pixar.movies AS m ON t.id = m.theater_id ORDER BY t.name;
+SELECT m.title, m.director, m.`year`, m.length_minutes, t.name, t.location FROM pixar.theater AS t RIGHT JOIN pixar.movies AS m ON t.id = m.theater_id ORDER BY t.name;
+SELECT title, (SELECT rating FROM pixar.boxoffice WHERE pixar.movies.id = pixar.boxoffice.movie_id) AS rating FROM pixar.movies 
+	WHERE id IN (SELECT movie_id FROM pixar.boxoffice WHERE pixar.movies.id = pixar.boxoffice.movie_id AND pixar.boxoffice.rating > 7.5);
+SELECT m.title, b.rating FROM pixar.movies AS m INNER JOIN pixar.boxoffice AS b ON m.id = b.movie_id WHERE b.rating > 7.5;
+SELECT title, (SELECT rating FROM pixar.boxoffice WHERE pixar.movies.id = pixar.boxoffice.movie_id) AS rating FROM pixar.movies 
+	WHERE id IN (SELECT movie_id FROM pixar.boxoffice WHERE pixar.movies.id = pixar.boxoffice.movie_id AND pixar.movies.`year` > 2009);
+SELECT m.title, b.rating FROM pixar.movies AS m INNER JOIN pixar.boxoffice AS b ON m.id = b.movie_id WHERE m.`year` > 2009;
+SELECT t.`name`, t.location FROM pixar.theater AS t WHERE EXISTS (SELECT * FROM pixar.movies WHERE t.id = pixar.movies.theater_id);
+SELECT t.`name`, t.location FROM pixar.theater AS t WHERE NOT EXISTS (SELECT * FROM pixar.movies WHERE t.id = pixar.movies.theater_id);

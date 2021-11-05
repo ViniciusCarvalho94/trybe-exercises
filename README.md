@@ -28,9 +28,10 @@
 
 #### Modulo 3: Desenvolvimento Back-end ⌛
 
-- ⌛ **Bloco 20:** Introdução à SQL
-- ❌ **Bloco 21:** Funções SQL, Joins e Subqueries
-- ❌ **Bloco 22:** Normalização e Modelagem de Banco de Dados
+- ✅ **Bloco 20:** Introdução à SQL
+- ✅ **Bloco 21:** Funções SQL, Joins e Subqueries
+- ✅ **Bloco 21.1:** Normalização e Modelagem de Banco de Dados
+- ⌛ **Bloco 22:** Docker: Utilizando Countainers
 - ❌ **Bloco 23:** Introdução ao MongoDB
 - ❌ **Bloco 24:** MongoDB: Updates Simples e Complexos
 - ❌ **Bloco 25:** MongoDB: Aggregation Framework
