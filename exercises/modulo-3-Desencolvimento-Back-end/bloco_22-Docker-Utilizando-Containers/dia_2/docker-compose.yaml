@@ -1,0 +1,13 @@
+version: '3'
+services:
+  site_trybe2:
+    build: .
+    container_name: site_trybe2
+    image: httpd:2.4
+    ports: ["4545:80"]
+    restart: "no"
+    volumes:
+      - ./:/usr/local/apache2/htdocs
+    working_dir: /usr/local/apache2/htdocs
+volumes:
+  trybe_data:
