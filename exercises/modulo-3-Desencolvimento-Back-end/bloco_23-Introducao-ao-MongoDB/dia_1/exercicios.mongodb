@@ -1,0 +1,42 @@
+// exercicio 1
+use('trybe')
+db.bios.find({_id: 8})
+
+// exercicio 2
+use('trybe')
+db.bios.find({_id: 8}, {_id: 1, name: 1})
+
+// exercicio 3
+use('trybe')
+db.bios.find({_id: 8}, {_id: 0, name: 1, birth: 1})
+
+// exercicio 4
+use('trybe')
+db.bios.find({'name.first': 'John'}).pretty()
+
+// exercicio 5
+use('trybe')
+db.bios.find().limit(3).pretty()
+
+// exercicio 6
+use('trybe')
+db.bios.find().skip(5).limit(2)
+
+// executar no bash do docker: para criar uma coleção nova
+mongoimport --db=trybe --collection=books --file=books.json
+
+// exercicio 7
+use('trybe')
+db.books.find().count()
+
+// exercicio 8
+use('trybe')
+db.books.find({status: 'PUBLISH'}).count()
+
+// exercicio 9
+use('trybe')
+db.books.find({}, {_id: 0, title: 1, isbn: 1, pageCount: 1}).limit(3)
+
+// exercicio 10
+use('trybe')
+db.books.find({status: "MEAP"}, {_id: 1, title: 1, authors: 1, status: 1}).skip(5).limit(10)
