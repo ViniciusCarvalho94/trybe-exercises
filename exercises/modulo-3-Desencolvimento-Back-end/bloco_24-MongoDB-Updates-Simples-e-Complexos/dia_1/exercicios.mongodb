@@ -1,0 +1,86 @@
+use('class')
+db.movies.find()
+
+// exercicio 1
+use('class')
+db.movies.updateOne({ title: 'Batman' }, { $set: { imdbRating: 7.7 } })
+
+// exercicio 2
+use('class')
+db.movies.updateOne({ title: 'Godzilla'}, { $set: { budget: 1 } })
+
+// exercicio 3
+use('class')
+db.movies.updateOne({ title: 'Home Alone' }, { $set: { budget: 15, imdbRating: 5.5 } })
+
+// exercicio 4
+use('class')
+db.movies.updateOne({ title: 'Batman' }, { $set: { imdbRating: 2 } })
+
+// exercicio 5
+use('class')
+db.movies.updateOne({ title: 'Home Alone' }, { $set: { budget: 5 } })
+
+// exercicio 6
+use('class')
+db.movies.updateOne({ title: 'Batman' }, { $set: { imdbRating: 4 } })
+
+// exercicio 7
+use('class')
+db.movies.updateOne({ title: 'Batman' }, { $rename: { "budget": "estimatedBudget" } })
+
+// exercicio 8
+use('class')
+db.movies.updateOne({ title: 'Home Alone' }, { $min: { budget: 5 }})
+
+// exercicio 9
+use('class')
+db.movies.updateOne({ title: 'Godzilla' }, { $max: { imdbRating: 8.6 }, $set: { 'category.1': 'thriller' } })
+
+// exercicios 10
+use('class')
+db.movies.updateMany({}, { $currentDate: { lastUpdated: { $type: 'timestamp' } } })
+
+// exercicio 11
+use('class')
+db.movies.updateMany({}, { $set: { sequels: 0 } })
+
+// exercicios 12
+use('class')
+db.movies.updateMany({}, { $unset: { budget: '', estimatedBudget: '' } })
+
+// exercicio 13
+use('class')
+db.movies.updateMany({ $or: [{ title: 'Batman' },{ title: 'Home Alone' }] }, { $max: { imdbRating: 17 } } )
+
+// bonus
+use('class')
+db.xmen.find()
+
+// exercicio 14
+use('class')
+db.xmen.updateMany({ class: 'unknown' }, { $unset: { class: '' }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
+
+// exercicio 15
+use('class')
+db.xmen.updateMany({}, { $rename: { 'name': 'hero_name', 'true_name': 'full_name' }, $set: { power: 100 }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
+
+// exercicio 16
+use('class')
+db.xmen.updateMany({ $or: [{ class: 'omega', class: 'gama' }] }, { $max: { power: 500 }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
+
+// exercicio 17
+use('class')
+db.xmen.updateMany({ class: 'gama' }, { $min: { power: 300 }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
+
+// exercicio 18
+use('class')
+db.xmen.updateMany({ class: { $exists: false } }, { $inc: { power: -100 }, $currentDate: { lastUpdate: { $type: 'timestamp' } } });
+
+// exercicio 19
+use('class')
+db.xmen.updateMany({ $or: [{ occupation: 'Senior Staff',  power: { $gt: 100 } }, { occupation: 'Junior Staff', power: { $gt: 200 } }] }, { $set: { areas: ['Students Room'] }, $currentDate: { lastUpdate: { $type: 'timestamp' } } })
+
+// exercicio 20
+use('class')
+db.xmen.updateMany({ areas: { $exists: false }, occupation: 'Junior Staff' }, { $set: { areas: ['Outside'] }, $currentDate: { lastUpdate: { $type: 'timestamp' } } });
