@@ -1,0 +1,262 @@
+use("erp")
+db.vendas.find()
+
+// 1
+use("erp")
+db.clientes.aggregate([
+  { $match: { sexo: "MASCULINO" } }
+])
+
+// 2
+use("erp")
+db.clientes.aggregate([ 
+  { 
+    $match: { 
+      sexo: "FEMININO", 
+      dataNascimento: { 
+        $gte: ISODate("1995-01-01"), 
+        $lte: ISODate("2005-12-31") 
+      } 
+    } 
+  } 
+])
+
+// 3
+use("erp")
+db.clientes.aggregate([
+  {
+    $match: {
+      sexo: "FEMININO",
+      dataNascimento: {
+        $gte: ISODate("1995-01-01"),
+        $lte: ISODate("2005-12-31")
+      },
+    },
+  },
+  { $limit: 5 }
+])
+
+// 4
+use("erp")
+db.clientes.aggregate([
+  {
+    $match: {
+      "endereco.uf": "SC"
+    }
+  },
+  {
+    $group: {
+      _id: "SC",
+      total: { $sum: 1 }
+    }
+  }
+])
+
+// 5
+use("erp")
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$sexo",
+      total: { $sum: 1 }
+    }
+  }
+])
+
+// 6
+use("erp")
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: {
+        uf: "$endereco.uf",
+        sexo: "$sexo"
+      },
+      total: { $sum: 1 }
+    }
+  }
+])
+
+// 7
+use("erp")
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: {
+        estado: "$endereco.uf",
+        sexo: "$sexo"
+      },
+      total: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      estado: "$_id.estado",
+      sexo: "$_id.sexo",
+      total: "$total"
+    }
+  }
+])
+
+// 8
+use("erp")
+db.vendas.aggregate([
+  {
+    $match: { status: { $in: ["EM SEPARACAO", "ENTREGUE"] }}
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      valorTotal: { $sum: "$valorTotal" }
+    }
+  },
+  {
+    $sort: { valorTotal: -1 }
+  },
+  {
+    $limit: 5
+  }
+])
+
+// 9
+use("erp")
+db.vendas.aggregate([
+  {
+    $match: { 
+      dataVenda: { 
+        $gte: ISODate("2019-01-01"), 
+        $lt: ISODate("2019-12-31")
+      },
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      valorTotal: { $sum: "$valorTotal" }
+    }
+  },
+  {
+    $sort: { valorTotal: -1 }
+  },
+  {
+    $limit: 10
+  }
+])
+
+// 10
+use("erp")
+db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 }
+    }
+  },
+  {
+    $match: { compras: { $gt: 5 } }
+  },
+  {
+    $count: "clientes"
+  }
+])
+
+// 11
+use("erp")
+db.vendas.aggregate([
+  {
+    $match: { 
+      dataVenda: { 
+        $gte: ISODate("2020-01-01"), 
+        $lte: ISODate("2020-03-31") 
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      compras: { $sum: 1 }
+    }
+  },
+  {
+    $match: { compras: { $lt: 3 } }
+  },
+  {
+    $count: "clientes"
+  },
+])
+
+// 12
+use("erp")
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate("2020-01-01"),
+        $lte: ISODate("2020-12-31")
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: "clientes",
+      localField: "clienteId",
+      foreignField: "clienteId",
+      as: "dadosCliente"
+    }
+  },
+  { $unwind: "$dadosCliente" },
+  {
+    $group: {
+      _id: "$dadosCliente.endereco.uf",
+      totalCompras: { $sum: 1 }
+    }
+  },
+  { $sort: { totalCompras: -1 } },
+  { $limit: 3, },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      totalCompras: 1
+    }
+  }
+])
+
+// 13
+use("erp")
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate("2019-01-01"),
+        $lte: ISODate("2019-12-31")
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: "clientes",
+      localField: "clientesId",
+      foreignField: "clientId",
+      as : "dadosCliente"
+    }
+  },
+  { $unwind: "$dadosCliente" },
+  {
+    $group: {
+      _id: "$dadosCliente.endereco.uf",
+      mediaVendas: { $avg: "$valorTotal" },
+      totalVendas: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      mediaVendas: 1,
+      totalVendas: 1
+    }
+  },
+  { $sort: { uf: 1 } }
+])
