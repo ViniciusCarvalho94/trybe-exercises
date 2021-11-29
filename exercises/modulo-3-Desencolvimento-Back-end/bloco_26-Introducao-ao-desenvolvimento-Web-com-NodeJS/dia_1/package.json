@@ -1,0 +1,17 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "imc": "node scripts/imc.js",
+    "start": "node scripts/index.js",
+    "sorteio": "node scripts/sorteio.js",
+    "velocidade": "node scripts/velocidade.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

@@ -1,0 +1,211 @@
+// 1.1
+use("agg_example")
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { client: "$name" },
+      pipeline: [
+        { 
+          $match: { 
+            $expr: { 
+              $eq: ["$from", "$$client"] 
+            } 
+          } 
+        }
+      ],
+      as: "clients_transactions"
+    }
+  }
+])
+
+// 1.2
+use("agg_example")
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { client: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$to", "$$client"]
+            }
+          }
+        }
+      ],
+      as: "clients_transactions"
+    }
+  },
+  { $sort: { State: 1 }},
+  { $limit: 4 }
+])
+
+// 1.3
+use("agg_example")
+db.clients.aggregate([
+  { $match: { State: "Florida" } },
+  {
+    $lookup: {
+      from: "transactions",
+      let: { client: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$to", "$$client"],
+            }
+          }
+        }
+      ],
+      as: "clients_transactions"
+    }
+  }
+])
+
+// 2.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_cost: {
+        $add: ["$purchase_price", "$taxes" ]
+      }
+    }
+  }
+])
+
+// 3.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      profit: {
+        $subtract: [
+          "$sale_price",
+          { $add: ["$purchase_price", "$taxes"] }
+        ]
+      }
+    }
+  }
+])
+
+// 6.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      floor_number: { $floor: "$sale_price" }
+    }
+  }
+])
+
+// 6.2
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      ceil_profit: {
+        $ceil: {
+          $subtract: [
+            "$sale_price",
+            { $add: ["$purchase_price", "$taxes"] }
+          ]
+        }
+      }
+    }
+  }
+])
+
+// 7.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      delta: {
+        $abs: {
+          $subtract: [
+            "$sale_price",
+            { $add: ["$purchase_price", "$taxes"] }
+          ]
+        }
+      }
+    }
+  }
+])
+
+// 8.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_price: {
+        $multiply: ["$sale_price", "$quantity"]
+      }
+    }
+  }
+])
+
+// 8.2
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_price: {
+        $multiply: [
+          {
+            $subtract: [
+              "$sale_price",
+              { $add: ["$taxes", "$purchase_price"] }
+            ]
+          }, 
+          "$quantity"
+        ]
+      }
+    }
+  }
+])
+
+// 9.1
+use("storage")
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      price_50_discount: {
+        $divide: ["$sale_price", 2]
+      }
+    }
+  }
+])
+
+use("storage")
+db.products.find()
+
+// 10.1
+use("storage")
+db.products.aggregate([
+  {
+    $addFields: {
+      total_value: {
+        $multiply: ["$sale_price", "$quantity"]
+      }
+    }
+  }
+])
