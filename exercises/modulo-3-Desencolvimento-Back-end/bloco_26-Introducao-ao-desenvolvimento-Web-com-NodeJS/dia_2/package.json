@@ -1,0 +1,15 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ex1": "node scripts/ex1",
+    "ex2": "node scripts/ex2",
+    "ex3": "node scripts/ex3",
+    "ex4": "node scripts/ex4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

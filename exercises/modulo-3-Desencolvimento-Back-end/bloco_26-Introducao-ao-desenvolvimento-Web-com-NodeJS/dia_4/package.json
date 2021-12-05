@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node api/main.js",
+    "dev": "nodemon --legacy-watch api/main.js -e js",
+    "exercices": "nodemon --legacy-watch api/exercices.js -e js",
+    "simpsons": "nodemon --legacy-watch api/simpsons.js -e js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
