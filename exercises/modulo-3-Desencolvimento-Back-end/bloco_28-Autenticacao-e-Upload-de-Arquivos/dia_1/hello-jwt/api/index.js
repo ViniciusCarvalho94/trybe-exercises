@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.post('/register', controllers.createUserController);
 app.post('/login', controllers.loginController);
-app.get('/posts', jwtValidateMiddleware, controllers.postController);
+app.get('/users/me', jwtValidateMiddleware, controllers.usersMeController);
 
 app.use(errorMiddleware);
 
