@@ -1,0 +1,16 @@
+'use strict';
+
+module.exports = (sequelize, DataTypes) => {
+  const Patient = sequelize.define('Patient', {
+      patient_id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+      fullname: DataTypes.STRING,
+      plan_id: DataTypes.DOUBLE
+  },
+  { timestamps: false, tableName: 'Patients', underscored: true });
+
+  Patient.associate = (models) => {
+    Patient.belongsTo(models.Plan, { foreignKey: 'plan_id', as: 'plan'})
+  }
+
+  return Patient
+};
