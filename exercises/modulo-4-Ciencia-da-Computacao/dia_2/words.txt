@@ -1,0 +1,7 @@
+banana
+morango
+abacaxi
+cachorro
+uva
+gato
+arroz
