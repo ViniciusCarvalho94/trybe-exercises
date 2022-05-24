@@ -43,14 +43,14 @@
 - ✅ **Bloco 31:** Sockets
 - ✅ **Bloco 32:** Projeto Trybeer
 
-#### Modulo 4: Ciência da Computação ⌛
+#### Modulo 4: Ciência da Computação ✅
 
 - ✅ **Bloco 33:** Introdução à Python e Raspagem de Dados da Web
 - ✅ **Bloco 34:** Programação Orientada a Objetos e Padrões de Projeto
 - ✅ **Bloco 35:** Arquitetura de Computadores e Redes
-- ⌛ **Bloco 36:** Algoritmos e Estrutura de Dados
-- ❌ **Bloco 37:** Estrutura de Dados: Hash e Set
-- ❌ **Bloco 38:** Estrutura de Dados: Pilhas, Filas e Listas
+- ✅ **Bloco 36:** Algoritmos e Estrutura de Dados
+- ✅ **Bloco 37:** Estrutura de Dados: Hash e Set
+- ✅ **Bloco 38:** Estrutura de Dados: Pilhas, Filas e Listas
 
 
 ##### Feito por: Vinicius Albuquerque de Carvalho // Turma 13 - Tribo B => Tribo C
