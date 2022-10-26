@@ -26,7 +26,7 @@
 - ✅ **Bloco 19:** Projeto App de Receitas
 
 
-#### Modulo 3: Desenvolvimento Back-end ⌛
+#### Modulo 3: Desenvolvimento Back-end ✅
 
 - ✅ **Bloco 20:** Introdução à SQL
 - ✅ **Bloco 21:** Funções SQL, Joins e Subqueries
